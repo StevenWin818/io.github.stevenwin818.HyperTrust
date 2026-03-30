@@ -1,6 +1,6 @@
 # HyperTrust (智能解锁修复)
 
-HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修复小米澎湃 OS (HyperOS) 系统中被隐藏且失效的 Google Extend Unlock (延长解锁) 功能而设计。
+HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修复小米澎湃 OS (HyperOS) 系统中被隐藏且失效的 延长解锁 (Extend Unlock，原称 Smart Lock) 功能而设计。
 
 ## 主要功能
 
@@ -16,9 +16,9 @@ HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修
 
 - 前置条件：系统已安装且正常运行 Google Play 服务 (GMS)
 
-## 关于延长解锁（Smart Lock）
+## 关于延长解锁（Extend Unlock）
 
-延长解锁（Smart Lock）是 Google 提供的功能，允许在受信任的环境或设备上自动解除锁屏。有关官方说明与配置详情，请参阅：
+延长解锁（原称 Smart Lock）是 Google 提供的功能，允许在受信任的环境或设备上自动解除锁屏。有关官方说明与配置详情，请参阅：
 
 - 官方文档：https://support.google.com/android/answer/9075927
 
