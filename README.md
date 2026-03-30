@@ -1,4 +1,4 @@
-# HyperTrust (智能解锁修复)
+# HyperTrust (延长解锁修复)
 
 <p align="right">切换语言: <a href="docs/README.en.md">English</a></p>
 
@@ -8,7 +8,7 @@ HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修
 
 - 底层状态修复：通过 Hook 系统界面，接管并修正 derivedTrustState 的状态传递，恢复 Trust Agent (可信代理) 的正常解锁能力。
 
-- 无缝配置路由：提供一个 LSPosed 执行入口。点击应用图标后，自动唤醒被系统隐藏的 GMS (Google Play 服务) 延长解锁配置页面。
+- 无缝配置路由：提供一个 LSPosed 执行入口。可以打开被系统隐藏的延长解锁配置页面。
 
 ## 环境要求
 
@@ -28,9 +28,9 @@ HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修
 
 1. 下载并安装 HyperTrust 的 Release 版本 APK。
 
-2. 打开 LSPosed 管理器，在模块列表中找到并启用 HyperTrust。
+2. 打开 LSPosed 管理器，在模块列表中找到并启用 HyperTrust，配置作用域勾选系统界面 (com.android.systemui)。
 
-3. 配置作用域 勾选 系统界面 (com.android.systemui)。
+3. 在系统中找到可信代理，打开延长解锁。
 
 4. 重启设备（或强制重启系统界面）以使 Hook 逻辑生效。
 
