@@ -1,4 +1,4 @@
-# HyperTrust (智能解锁修复)
+# HyperTrust (延长解锁修复)
 
 <p align="right">切换语言: <a href="docs/README.en.md">English</a></p>
 
