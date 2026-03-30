@@ -1,17 +1,20 @@
-# HyperTrust (Extended Unlock Fix)
+# HyperTrust (Extend Unlock Fix)
 
 <p align="right">Language: <a href="../README.md">简体中文</a></p>
 
-HyperTrust is a system-level Android module built on the LSPosed framework designed to restore Google Extended Unlock(formerly Smart Lock) functionality that may be broken or hidden on Xiaomi HyperOS.
+HyperTrust is a system-level Android module built on the LSPosed framework, designed to fix the Extend Unlock (formerly Smart Lock) feature when it is hidden or disabled on Xiaomi HyperOS.
+
 ## Main Features
 
-- Core state repair: Hook into V12 core logic to correct the derivedTrustState propagation, restoring the Trust Agent's unlock capability.
+- Core state repair: Hook the system UI to intercept and correct the propagation of `derivedTrustState`, restoring the Trust Agent's unlock capability.
 
-- Seamless configuration routing: Provides a transparent desktop entry. Tapping the app icon wakes the hidden GMS (Google Play services) Extended Unlock configuration page.
+- Seamless configuration routing: Provide an LSPosed execution entry. Tapping the app icon wakes the hidden Extend Unlock configuration page.、
 
-- High security, zero privilege escalation: Avoids root (su) and direct code injection into GMS. Uses a proxy wake approach by sending an IPC broadcast to the system UI (`com.android.systemui`), requiring no root and minimizing impact on Play Integrity.
+## About Extend Unlock(formerly Smart Lock)
 
-- Lightweight: Pure Java (Xposed API 82), no extra UI or third-party libs.
+Extend Unlock is a Google-provided feature that allows the device to stay unlocked in trusted environments or when connected to trusted devices. For official documentation, see:
+
+- https://support.google.com/android/answer/9075927
 
 ## Requirements
 
@@ -20,23 +23,15 @@ HyperTrust is a system-level Android module built on the LSPosed framework desig
 - Google Play services (GMS) installed and functioning on the device
 
 ## Installation & Configuration
+1. Download and install the HyperTrust Release APK.
 
-1. Install the HyperTrust Release APK on the target device.
-2. Open LSPosed manager and enable the HyperTrust module.
-3. Scope configuration (important):
+2. Open the LSPosed manager, find HyperTrust in the module list and enable it; in the scope configuration, check the System UI (`com.android.systemui`).
 
-   - Enable `com.android.systemui` (to receive high-privilege wake broadcasts).
-   - Enable the Android framework (`android`) or other lockscreen-related components (to intercept and repair Trust Agent state).
-   - Do NOT enable Google Play services in LSPosed to avoid affecting device attestation.
+3. In the system settings, locate the Trust Agent and enable Extend Unlock.
 
-4. Reboot the device (or restart SystemUI) to apply hooks.
-5. Tap the HyperTrust icon on the launcher to open the Extended Unlock configuration page.
+4. Reboot the device (or force-restart SystemUI) to apply the hook logic.
 
-## About Extended Unlock(formerly Smart Lock)
-
-Extended Unlock is a Google-provided feature that allows the device to stay unlocked in trusted environments or when connected to trusted devices. For official documentation, see:
-
-- https://support.google.com/android/answer/9075927
+5. In LSPosed, find and open the HyperTrust configuration page, then tap the execute icon at the bottom-right to open the Extend Unlock configuration page.
 
 > This English translation was provided by AI.
 
