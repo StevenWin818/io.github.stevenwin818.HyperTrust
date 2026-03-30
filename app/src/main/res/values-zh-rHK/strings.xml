@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HyperTrust</string>
+    <string name="xposed_description">恢復 HyperOS 上的「延長解鎖」(Extend Unlock) 功能。</string>
+    <string name="toast_gms_not_found">無法喚醒「延長解鎖」(Extend Unlock) 配置，請確認 GMS 已正常运行。</string>
+</resources>

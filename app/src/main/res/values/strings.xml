@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HyperTrust</string>
+    <string name="xposed_description">Restores Google Extend Unlock (Smart lock) functionality on HyperOS.</string>
+    <string name="toast_gms_not_found">Unable to launch Extend Unlock settings. Please ensure GMS is running properly.</string>
+</resources>

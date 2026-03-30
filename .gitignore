@@ -1,0 +1,36 @@
+# Local configuration
+local.properties
+/local.properties
+
+# IDE (IntelliJ IDEA / Android Studio)
+*.iml
+.idea/
+!.idea/codeStyles/
+!.idea/runConfigurations/
+!.idea/dictionaries/
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Gradle
+.gradle/
+
+# Build artifacts
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Keystore files (keep private)
+*.jks
+*.keystore
+
+# Personal or temporary files
+/TestSmartLock/
