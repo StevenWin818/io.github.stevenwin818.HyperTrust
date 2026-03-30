@@ -12,7 +12,7 @@ HyperTrust 是一个基于 LSPosed 框架的 Android 系统级模块，专为修
 
 ## 环境要求
 
-- 系统版本：Android 12+ (API 31+)，Hyper OS 1.0+
+- 系统版本：Android 12+ (API 31+), Hyper OS 1.0+
 
 - 框架依赖：已安装并激活 LSPosed (或兼容的 Xposed 衍生框架)
 

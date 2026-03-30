@@ -1,9 +1,8 @@
-# HyperTrust (Smart Unlock Fix)
+# HyperTrust (Extended Unlock Fix)
 
-<p align="right">Language: <a href="../README.md">中文 (中文为主)</a></p>
+<p align="right">Language: <a href="../README.md">简体中文</a></p>
 
-HyperTrust is a system-level Android module built on the LSPosed framework designed to restore Google Smart Lock (Extended Unlock) functionality that may be broken or hidden on Xiaomi HyperOS and some heavily customized ROMs.
-
+HyperTrust is a system-level Android module built on the LSPosed framework designed to restore Google Extended Unlock(formerly Smart Lock) functionality that may be broken or hidden on Xiaomi HyperOS.
 ## Main Features
 
 - Core state repair: Hook into V12 core logic to correct the derivedTrustState propagation, restoring the Trust Agent's unlock capability.
@@ -16,7 +15,7 @@ HyperTrust is a system-level Android module built on the LSPosed framework desig
 
 ## Requirements
 
-- Android 12+ (API 31+)
+- Android 12+ (API 31+), Hyper OS 1.0+
 - LSPosed (or compatible Xposed-derived framework) installed and active
 - Google Play services (GMS) installed and functioning on the device
 
@@ -33,14 +32,14 @@ HyperTrust is a system-level Android module built on the LSPosed framework desig
 4. Reboot the device (or restart SystemUI) to apply hooks.
 5. Tap the HyperTrust icon on the launcher to open the Extended Unlock configuration page.
 
-## About Smart Lock (Extended Unlock)
+## About Extended Unlock(formerly Smart Lock)
 
-Smart Lock allows the device to stay unlocked in trusted environments or when connected to trusted devices. For official documentation, see:
+Extended Unlock is a Google-provided feature that allows the device to stay unlocked in trusted environments or when connected to trusted devices. For official documentation, see:
 
 - https://support.google.com/android/answer/9075927
 
-Note: This English translation was provided by AI.
+> This English translation was provided by AI.
 
 ---
 
-If you spot any inaccuracies in this translation, please refer to the Chinese README (`../README.md`) as the authoritative source.
+> If you spot any inaccuracies in this translation, please refer to the Chinese README (`../README.md`) as the authoritative source.
