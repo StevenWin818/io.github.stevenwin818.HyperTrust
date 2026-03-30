@@ -23,6 +23,10 @@ build/
 captures/
 .externalNativeBuild/
 .cxx/
+app/build/
+*/build/
+app/release/
+app/debug/
 
 # Operating system files
 .DS_Store
