@@ -16,8 +16,8 @@ android {
         applicationId = "io.github.stevenwin818.HyperTrust"
         minSdk = 31
         targetSdk = 34
-        versionCode = 26033102
-        versionName = "1.2.0"
+        versionCode = 26040501
+        versionName = "1.2.2"
         resConfigs("en", "zh-rCN", "zh-rHK", "zh-rTW")
     }
 
