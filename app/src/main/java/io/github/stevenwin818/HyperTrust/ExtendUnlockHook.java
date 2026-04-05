@@ -2,7 +2,8 @@ package io.github.stevenwin818.HyperTrust;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
-import android.app.KeyguardManager;import android.content.BroadcastReceiver;
+import android.app.KeyguardManager;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +19,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 public class ExtendUnlockHook implements IXposedHookLoadPackage {
 
     private static final String ACTION_WAKE_TRUST_AGENT = "io.github.stevenwin818.HyperTrust.WAKE_TRUST_AGENT";
+    private static final String PERMISSION_WAKE = "io.github.stevenwin818.HyperTrust.PERMISSION_WAKE";
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
@@ -88,11 +90,12 @@ public class ExtendUnlockHook implements IXposedHookLoadPackage {
                             };
 
                             IntentFilter filter = new IntentFilter(ACTION_WAKE_TRUST_AGENT);
+                            
+                            // 修复广播安全漏洞：要求发送者持有签名级权限
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                                // Android 13+ 必须显式指定 EXPORTED 以接收来自 MainActivity 的广播
-                                app.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+                                app.registerReceiver(receiver, filter, PERMISSION_WAKE, null, Context.RECEIVER_EXPORTED);
                             } else {
-                                app.registerReceiver(receiver, filter);
+                                app.registerReceiver(receiver, filter, PERMISSION_WAKE, null);
                             }
                         }
                     }

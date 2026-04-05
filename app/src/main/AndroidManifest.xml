@@ -1,6 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.stevenwin818.HyperTrust">
 
+    <!-- 定义自定义权限，保护级别为 signature -->
+    <permission
+        android:name="io.github.stevenwin818.HyperTrust.PERMISSION_WAKE"
+        android:protectionLevel="signature" />
+
+    <!-- 声明使用该权限 -->
+    <uses-permission android:name="io.github.stevenwin818.HyperTrust.PERMISSION_WAKE" />
+
     <queries>
         <package android:name="com.google.android.gms" />
     </queries>
@@ -31,7 +39,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
